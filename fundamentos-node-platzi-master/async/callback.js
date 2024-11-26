@@ -1,23 +1,23 @@
-function hola(nombre, miCallback) {
-    setTimeout(function () {
-        console.log('Hola, '+ nombre);
-        miCallback(nombre);
-    }, 1500);
+function hola(nombre, callback) {
+    setTimeout(() => {
+        console.log('> async -> Hola: ' + nombre);
+        callback(nombre);
+    }, 5000)
 }
 
-function adios(nombre, otroCallback) {
-    setTimeout(function() {
-        console.log('Adios', nombre);
-        otroCallback();
-    }, 1000);
+function adios(nombre, callback) {
+    setTimeout(() => {
+        console.log('> async -> Adios: ' + nombre);
+        callback();
+    }, 0)
 }
 
-console.log('Iniciando proceso...');
-hola('Carlos', function (nombre) {
-    adios(nombre, function() {
-        console.log('Terminando proceso...');
+console.log('> Iniciando proceso...');
+
+hola('Carlos', (recibeELNombre) => {
+    adios(recibeELNombre, () => {
+        console.log('> Proceso terminado');
     });
 });
 
-// hola('Carlos', function () {});
-// adios('Carlos', function () {});
+console.log('> Terminando proceso...');
