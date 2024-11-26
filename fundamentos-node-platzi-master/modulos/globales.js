@@ -3,7 +3,8 @@
 // console.log(__filename);
 
 // Timers
-// console.log(setInterval);)
+// console.log(global);
+// console.log(setInterval);
 // console.log(clearInterval);
 // console.log(setTimeout);
 // console.log(clearTimeout);
@@ -18,3 +19,9 @@
 // global.test = 'Ejemplo';
 // console.log(test);
 // console.log(global.test);
+
+
+// Procesos
+// console.log(process);
+
+
