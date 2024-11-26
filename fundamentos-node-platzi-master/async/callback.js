@@ -12,6 +12,8 @@ function adios(nombre, callback) {
     }, 0)
 }
 
+// --------------------------------------------------------------- EJECUCIÓN
+
 console.log('> Iniciando proceso...');
 
 hola('Carlos', (recibeELNombre) => {
